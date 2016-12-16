@@ -1,21 +1,1 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
-
-class App extends Component {
-  render () {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    )
-  }
-}
-
-export default App
+import React, { Component } from 'react'// import { Provider } from 'react-redux'// import { createStore } from 'redux'import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'import Home from './Home'const About = () => <div><h1>About</h1><Links /></div>const NoMatch = () => <div><h1>NoMatch</h1><Links /></div>const Links = () =><ul>  <Link to='/'>Home</Link>  <br/>  <Link to='/about'>About</Link></ul>class App extends Component {  render () {    return (      <Router history={browserHistory}>        <Route path='/'>          <IndexRoute component={Home}/>          <Route path='about' component={About}/>        </Route>        <Route path='*' component={NoMatch}/>      </Router>    )  }}export default App

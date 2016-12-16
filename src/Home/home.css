@@ -1,0 +1,22 @@
+.movie {
+    width: 300px;
+    height: 400px;
+    align-items: center;
+}
+
+img {
+    padding: 0px 57.5px;
+}
+
+h4 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+}
