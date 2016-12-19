@@ -5,6 +5,7 @@ function getRequestPromise(url) {
     $.ajax({
       url: url,
       success: function( result ) {
+        // console.log('request',result)
         resolve(result)
       }
     })
